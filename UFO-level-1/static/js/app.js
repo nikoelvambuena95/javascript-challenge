@@ -16,10 +16,10 @@ data.forEach(function(ufoReport) {
 });
 
 // select the button
-var button = d3.select("#button");
+var button = d3.select("#filter-btn");
 
 // select the form
-var form = d3.select("#form");
+var form = d3.select("#date-form");
 
 // create event handlers for clicking the button or pressing the enter key
 button.on("click", runEnter);
@@ -41,7 +41,7 @@ function runEnter(){
     console.log(inputValue);
     
 
-    // set the span tag in the h1 element to the text that was entered
-    d3.select
+    // // set the span tag in the h1 element to the text that was entered
+    // d3.select
 
 }
