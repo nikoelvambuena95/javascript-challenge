@@ -37,11 +37,24 @@ function runEnter(){
     // get the value property of the input element
     var inputValue = inputElement.property("value");
 
-    // print the value to the console
-    console.log(inputValue);
-    
+    // filter data
+    var filteredData = data.filter(data => data.datetime === inputValue);
 
-    // // set the span tag in the h1 element to the text that was entered
-    // d3.select
+    // select row elements of table
+    var row = d3.selectAll("tr");
+    var date = d3.select("td")[0];
 
-}
+    // // loop through table
+    // for (i = 0; i < tr.length; i++) {
+    //     td = tr[i].d3.select("td")[0];
+    //     if (td) {
+    //         txt
+    //     }
+    // }
+
+    // // print the value to the console
+    // console.log(inputValue);
+    // console.log(row);
+    console.log(filteredData);
+
+};
