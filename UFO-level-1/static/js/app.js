@@ -31,6 +31,10 @@ function runEnter(){
     // prevent the page from refreshing
     d3.event.preventDefault();
 
+    // clear table rows
+    var row = d3.selectAll("tr")
+    row.remove()
+
     // select the input element and get the raw HTML node
     var inputElement = d3.select("#datetime");
 
@@ -50,13 +54,6 @@ function runEnter(){
             cell.text(value)
             })
     });
-
-
-  
-
-    // // print the value to the console
-    // console.log(inputValue);
-
     console.log(filteredData);
 
 };
