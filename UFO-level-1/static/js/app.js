@@ -9,9 +9,9 @@ data.forEach(function(ufoReport) {
     var row = tbody.append("tr");
 
     Object.entries(ufoReport).forEach(function([key, value]) {
-    console.log(key, value);
-    var cell = row.append("td");
-    cell.text(value)
+        console.log(key, value);
+        var cell = row.append("td");
+        cell.text(value)
     })
 });
 
@@ -40,21 +40,23 @@ function runEnter(){
     // filter data
     var filteredData = data.filter(data => data.datetime === inputValue);
 
-    // select row elements of table
-    var row = d3.selectAll("tr");
-    var date = d3.select("td")[0];
+    filteredData.forEach(ufoReport => {
+        console.log(ufoReport);
+        var row = tbody.append("tr")
 
-    // // loop through table
-    // for (i = 0; i < tr.length; i++) {
-    //     td = tr[i].d3.select("td")[0];
-    //     if (td) {
-    //         txt
-    //     }
-    // }
+        Object.entries(ufoReport).forEach(function([key, value]) {
+            console.log(key, value);
+            var cell = row.append("td");
+            cell.text(value)
+            })
+    });
+
+
+  
 
     // // print the value to the console
     // console.log(inputValue);
-    // console.log(row);
+
     console.log(filteredData);
 
 };
